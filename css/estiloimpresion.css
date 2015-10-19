@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;}
+
+div#areaimpresion{
+	background-color:#54D7D1;
+	width:21.5cm;
+	height:auto;
+	margin:auto;}

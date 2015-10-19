@@ -1,0 +1,247 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;}
+
+body{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size:15px;
+	background-color:#F1EEEE;
+	}
+header{
+	padding-top:20px;
+	height:70px;
+	width:100%;
+	margin:auto;
+	
+	}
+input{
+	color:#000000;
+	background-color:#000000;
+	color:#FFFFFF;
+	border-color:#FF9600;}
+select{
+	color:#000000;
+	background-color:#000000;
+	color:#FFFFFF;
+	border-color:#FF9600;
+	}
+select#lineacredito{
+	background-color:FFBC88;}
+	
+h1{
+	
+	text-align:center;
+		}
+div#contenedor{
+	color:#FBF3F3;
+	background-color:#000000;
+	width:80%;
+	height:100%;
+	margin:auto;	
+	}
+div#logo{
+	background-image:url(../images/logo.png);
+	width:24%;
+	height:300px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:2%;
+	background-repeat:no-repeat;}
+
+input.boton	{  width: 70px;}
+input, select{
+	border-radius:10px;
+	font-size:20px;
+	margin-top:10px;
+	}
+
+
+
+label, select{
+	margin-top:10px;
+	font-size: 20px;
+	}
+
+div#datos{
+	width:94%;
+	margin:auto;
+	
+	}
+	
+	
+
+
+div.resultado{
+	background-color:#FCF8F8;
+	width:100%;}
+	
+label#nominal,#periodico, #efectivo{
+	color:#FF2A30;
+	}
+
+	
+label#ama,#amb,#amc{
+	color:#FF2A30;
+	}
+table, table td, table tr {
+	padding:0px;
+	border-spacing: 0px;
+}
+
+table {
+	width:100%;
+	border:1px black solid;
+	border-radius:5px;
+	min-width:400px;
+	font-family: Helvetica,Arial;
+}
+
+table td {
+	padding:6px;
+}
+
+table tr:first-child td:first-child {
+	border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+	border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+	border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+	border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+	border:1px #FF7E00 solid;
+}
+
+
+table tr:nth-child(2n) {
+	background: #F8EEEE;
+	color:#000000;
+	text-align:center;
+	font-family: Helvetica,Arial;
+	border:1px #FF7E00 solid;
+	font-weight: bold;
+}
+
+table tr:nth-child(2n+1){
+	background: #FFA027;
+	background-color:#FFBC88;
+	color:#000000;
+	text-align:center;
+	font-family: Helvetica,Arial;
+	border:1px #FF7E00 solid;
+	font-weight: bold;
+ 
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+	background:#9E9E9E;
+}
+
+table:not(.header) tr {
+	text-align: left;
+}
+
+table.header tr:first-child {
+	font-weight: bold;
+	color:#fff;
+	background-color: #444;
+	border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+	text-align: right;
+}
+
+table.datospersonales th{
+	background-color:#FFFFFF;
+	border:1px #FF7E00 solid;
+	}
+table.datospersonales{
+	width:100%;
+	border-radius:1px;
+	min-width:400px;
+	font-family: Helvetica,Arial;
+	border:1px #FF7E00 solid;
+	font-weight: bold;
+}
+table.datospersonales td{
+		background-color:#F3F3F3;
+		color:#000000;
+		font-family: Helvetica,Arial;
+		border-radius:2px;
+		border:1px #FF7E00 solid;
+		text-align:justify;
+		font-weight: bold;
+		}
+	
+table.datospersonales td:hover {
+	background:#9E9E9E;
+}	
+table.datospersonales td.KK{
+	background: #FFA027;
+	background-color:#FFBC88;
+	color:#000000;
+	text-align:center;
+	font-family: Helvetica,Arial;
+	border:1px #FF7E00 solid;
+	font-weight: bold;}
+	
+	
+/*tabla da*/
+table.da{
+	width:60%;
+	margin:auto;}
+table.da td{
+	background-color:#FFBC88;
+	color: #000000;
+	font-size:12px;
+	font-weight:bold;
+	text-align:justify;}
+
+div.selectordelinea{
+	width:80%;
+	margin:auto;
+	margin-bottom:3%;
+	text-align:center;
+	background-color: #FFBC88;
+	padding:20px 20px;
+	border-radius:10px;
+	color:#000000;
+	font-weight:bold;
+	
+	}
+	
+	
+/*botton*/
+
+input#enviar{
+ border: none;
+ background: #000000;
+ color: #FF840B;
+ padding: 10px;
+ font-size: 18px;
+ border-radius: 5px;
+ position: relative;
+ box-sizing: border-box;
+  box-shadow: inset 0 0 0 3px #CF6F2E;
+ transition: all 500ms ease;
+}
+
+input#enviar:hover {
+ background: #FF840B;
+ color: #000000;
+ box-shadow: inset 0 0 0 3px #000000;
+}
+
+
+

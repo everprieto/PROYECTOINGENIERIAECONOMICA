@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>SIMULADOR DE CREDITO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/estilopricipal.css" rel="stylesheet" type="text/css">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+    </head>
+    <body>
+        
+        <div id="contenedor">
+        <header>
+            
+                <h1>SIMULADOR DE CREDITO</h1>
+        		
+            
+        </header>
+  		 
+   <div class="selectordelinea">
+         <div id="datos">
+         
+         <label> LINEA DE CREDITO </label>
+           <select name="lineacredito" id="lineacredito">
+  <option value=0>CLICK AQUI PARA DEPLEGAR LSTADO DE LINEAS DE CREDITO </option>         
+  <option value=1>1: ORDINARIA TRADICIONAL </option>
+  <option value=2>2: CUOTA FIJA TASA FIJA </option>
+  <option value=3>3: CUOTA FIJA TASA VARIABLE </option>
+			</select>
+            <p><input type="image" src="images/impresora.png" class="printer" value="Imprimir" onClick="imprimir()"></p>
+         </div>  </br> 
+         
+         
+         <div id="lineascre">
+         
+        <form name="ingresodatos">
+  <table border="1" class="da" id="da">
+  <tbody>
+    <tr>
+      <td><label>FECHA:</label></td>
+      <td><input type="text" name="fecha" id="fecha" placeholder="Ingrese apellidos"  maxlength="25" size="25" required disabled /></td>
+    </tr>
+    <tr>
+      <td><label>APELLIDOS:</label></td>
+      <td> <input type="text" name="apellidos" id="apellidos" placeholder="Ingrese apellidos"  maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>NOMBRES:</label> </td>
+      <td><input type="text" name="nombres" id="nombres" placeholder="Ingrese nombres" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>CEDULA:</label></td>
+      <td><input type="text" name="ced" id="ced" placeholder="Ingrese cedula" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>CORREO:</label></td>
+      <td> <input type="email" name="correo" id="correo" placeholder="correo@dominio.com" maxlength="25" size="25"  /></td>
+    </tr>
+    <tr>
+      <td><label>TELEFONO:</label></td>
+      <td><input type="text" name="tel" id="tel" placeholder="Ingresar telefono" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>VALOR CREDITO: $</label></td>
+      <td><input type="text" name="vrcredito" id="vrcredito" placeholder="" maxlength="25" size="25" value="0" required /></td>
+    </tr>
+    <tr>
+      <td><label>TIEMPO CREDITO: (A&ntilde;os)</label></td>
+      <td><input type="number" name="tcredito" id="tcredito" min="1" max="5" value="0"  /></td>
+    </tr>
+    <tr>
+      <td><label>INTERESES:</label></td>
+      <td><input type="text" name="interes" id="interes" placeholder="00.00" maxlength="6" size="6" required value="0"  />%</td>
+    </tr>
+    <tr>
+      <td> <label> TASA:</label></td>
+      <td><select name="tasa" id="tasa">
+   <option value=1>NOMINAL </option>
+  <option value=2>PERIODICA </option>
+  <option value=3>EFECTIVA </option>
+			</select></td>
+    </tr>
+    <tr>
+      <td><label>AMORTIZACION:</label></td>
+      <td><select name="amortizacion" id="amortizacion">
+   <option value=12>Mensual</option>
+   <option value=6>Bimestral</option>
+   <option value=4>Trimestral</option>
+   <option value=2>Semestral</option>
+   <option value=1>Anual</option>
+			</select></td>
+    </tr>
+  </tbody>
+</table>     
+    <H3>RESULTADO TASA DE INTERESES </H3>
+    <p><label>INTERES NOMINAL: </label><label id="nominal"></label><label id="ama"></label></p>
+    <p><label>INTERES PERIODICO: </label><label id="periodico"></label><label id="amb"></label></p>
+    <p><label>INTERES EFECTIVO:</label><label id="efectivo"></label><label id="amc"></label></p>
+          <input type="button" id="enviar" value="CALCULAR CUOTAS" />
+        </form>
+        </div><!--fin div lineascre-->
+
+<!--linea de credito 2-->
+ <div id="lineascreb">
+         
+        <form name="ingresodatosb">
+  <table border="1" class="da" id="da">
+  <tbody>
+    <tr>
+      <td><label>FECHA:</label></td>
+      <td><input type="text" name="fechab" id="fechab" placeholder="Ingrese apellidos"  maxlength="25" size="25" required disabled /></td>
+    </tr>
+    <tr>
+      <td><label>APELLIDOS:</label></td>
+      <td> <input type="text" name="apellidosb" id="apellidosb" placeholder="Ingrese apellidos"  maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>NOMBRES:</label> </td>
+      <td><input type="text" name="nombresb" id="nombresb" placeholder="Ingrese nombres" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>CEDULA:</label></td>
+      <td><input type="text" name="cedb" id="cedb" placeholder="Ingrese cedula" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>CORREO:</label></td>
+      <td> <input type="email" name="correob" id="correob" placeholder="correo@dominio.com" maxlength="25" size="25"  /></td>
+    </tr>
+    <tr>
+      <td><label>TELEFONO:</label></td>
+      <td><input type="text" name="telb" id="telb" placeholder="Ingresar telefono" maxlength="25" size="25" required /></td>
+    </tr>
+    <tr>
+      <td><label>VALOR CREDITO: $</label></td>
+      <td><input type="text" name="vrcreditob" id="vrcreditob" placeholder="" maxlength="25" size="25" value="3000000" required /></td>
+    </tr>
+    <tr>
+      <td><label>TIEMPO CREDITO: (A&ntilde;os)</label></td>
+      <td><input type="number" name="tcreditob" id="tcreditob" min="1" max="5" value="1"  /></td>
+    </tr>
+    <tr>
+      <td><label>INTERESES:</label></td>
+      <td><input type="text" name="interesb" id="interesb" placeholder="00.00" maxlength="6" size="6" required value="18"  />%</td>
+    </tr>
+    <tr>
+      <td> <label> TASA:</label></td>
+      <td><select name="tasab" id="tasab">
+   <option value=1>NOMINAL </option>
+  <option value=2>PERIODICA </option>
+  <option value=3>EFECTIVA </option>
+			</select></td>
+    </tr>
+    <tr>
+      <td><label>AMORTIZACION:</label></td>
+      <td><select name="amortizacionb" id="amortizacionb">
+   <option value=12>Mensual</option>
+   <option value=6>Bimestral</option>
+   <option value=4>Trimestral</option>
+   <option value=2>Semestral</option>
+   <option value=1>Anual</option>
+			</select></td>
+    </tr>
+  </tbody>
+</table>     
+    <H3>RESULTADO TASA DE INTERESES </H3>
+    <p><label>INTERES NOMINAL: </label><label id="nominalb"></label><label id="ama"></label></p>
+    <p><label>INTERES PERIODICO: </label><label id="periodicob"></label><label id="amb"></label></p>
+    <p><label>INTERES EFECTIVO:</label><label id="efectivob"></label><label id="amc"></label></p>
+          <input type="button" id="enviarb" value="CALCULAR CUOTAS" />
+        </form>
+        </div><!--fin div lineascreb-->
+
+
+
+
+
+
+
+
+
+
+        <div id="lineascrec">
+        <h1>Parte 3</h1>
+        </div><!--fin div lineascrec-->
+        </div><!--fin datos-->
+        	
+         <div id="areaimpresiona">
+            <table class="datospersonales">
+  				
+                <thead>
+                <tr>
+                <td colspan="6" class="KK"><H2>BANCO CONSUELO S.A</H2></td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                <td colspan>FECHA</td>
+                <td><label id="resa"></label></td>
+                <td colspan>LINEA DE CREDITO: </td>
+                <td colspan="3"><label id="resb"></label></td>
+                </tr>           
+                <tr>
+                <td>CLIENTE</td>
+                <td colspan="3"><label id="resc"></label></td>
+                <td>DOCUMENTO</td>
+                <td><label id="resdd"></label></td>
+                </tr>
+               <tr>
+                <td colspan>CORREO</td>
+                <td colspan="3"><label id="rese"></label></td>
+                <td colspan>TELEFONO</td>
+                <td><label id="resf"></label></td>
+                </tr>  
+                <tr>
+                <td>VALOR CREDITO</td>
+                <td  colspan="2"><label id="resg"></label></td>
+                <td>TIEMPO CREDITO</td>
+                <td colspan="2"><label id="resh"></label></td>
+                </tr> 
+                 <tr>
+                <td colspan>INTERES NOMINAL</td>
+                <td><label id="resi"></label></td>
+                <td colspan>INTERES PERIODICO</td>
+                <td><label id="resj"></label></td>
+                <td colspan>INTERES EFECTIVO</td>
+                <td><label id="resk"></label></td>
+                </tr> 
+               
+               
+                </tbody>
+                
+			</table> 	        
+            
+ <div id="resultado">   
+ 			
+            
+    </div>
+          </div>                       
+        <div id="logo">
+        
+        </div>
+        </div><!-- fin contenedor -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
